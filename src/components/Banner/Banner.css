@@ -1,0 +1,13 @@
+.banner {
+  background-image: url("./img/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  width: 1442.55px;
+  height: 832px;
+  gap: 0px;
+  background-color: #030a2a;
+  display: flex;
+  justify-content: center;
+  border: 5px solid rgba(107, 209, 255, 1);
+}

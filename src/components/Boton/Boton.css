@@ -1,0 +1,28 @@
+.boton{
+    
+cursor: pointer;
+width: 180.13px;
+height: 54px;
+gap: 0px;
+border-radius: 10px;
+border: 2px 0px 0px 0px;
+opacity: 0px;
+background: rgba(0, 0, 0, 0.9);
+font-family: "Source Sans 3";
+font-size: 20px;
+font-weight: 900;
+line-height: 24px;
+text-align: center;
+
+
+}
+.boton:hover{
+    color:var(--Blue, rgba(34, 113, 209, 1));
+    border: 2px solid var(--Blue, rgba(34, 113, 209, 1));
+    box-shadow: 0px 0px 12px 4px rgba(34, 113, 209, 1) inset;
+
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
