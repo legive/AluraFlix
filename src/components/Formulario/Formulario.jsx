@@ -6,9 +6,7 @@ import "./Formulario.css";
 import Campo from "../Campo/Campo";
 import ListaOpciones from "../ListaOpciones";
 import { v4 as uuid } from "uuid";
-
-
-
+import { Link } from "react-router-dom";
 
 const Formulario = () => {
 
@@ -18,13 +16,13 @@ const Formulario = () => {
   
   
   const [titulo, actualizarTitulo] = useState("");
-  const [categoria, actualizaCategoria] = useState("");
+  const [categoria, actualizaCategoria] = useState("FRONT END");
   const [imagen, actualizarImagen] = useState("");
   const [video, actualizarVideo] = useState("");
   const [descripcion, actualizardescripcion] = useState("");
   
    const registrarVideo = (nuevoVideo) => {
-     console.log("Nuevo colaborador", nuevoVideo);
+     
      //Spread operator
      agregarVideo(nuevoVideo);
    };
@@ -34,13 +32,14 @@ const Formulario = () => {
     console.log("Manejar el envio");
     let datosAEnviar = {
       id: uuid(),
-      titulo,
-      categoria,
-      imagen,
-      video,
-      descripcion,
+      title: titulo,
+      category:categoria,
+      photo:imagen,
+      link:video,
+      description:descripcion,
     };
     registrarVideo(datosAEnviar);
+     history.push("/");
   };
    const manejarCambioDescripcion = (e) => {
      actualizardescripcion(e.target.value);
@@ -65,9 +64,10 @@ const Formulario = () => {
           ></Campo>
           <div className="selec">
             <label>Categoría</label>
-            <ListaOpciones valor={categoria} actualizaCategoria={actualizaCategoria}>
-
-            </ListaOpciones>
+            <ListaOpciones
+              valor={categoria}
+              actualizaCategoria={actualizaCategoria}
+            ></ListaOpciones>
           </div>
         </div>
         <div className="group2">
@@ -95,9 +95,11 @@ const Formulario = () => {
         ></textarea>
 
         <div className="botones">
-          <button className="boton" type="submit">
-            GUARDAR
-          </button>
+         
+            <button className="boton" type="submit">
+              GUARDAR
+            </button>
+      
           <button className="boton" type="submit">
             LIMPIAR
           </button>

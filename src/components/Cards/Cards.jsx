@@ -9,7 +9,8 @@ import "./Cards.css";
 const Cards = () => {
   // Utiliza el contexto para obtener los datos
   const { data } = useContext(DataContext)
-  console.log("Datos"+data);
+
+  console.log("Datos", { data });
 
   // Filtrar datos por categorías
   const frontendData = data.filter((item) => item.category === "FRONT END");
@@ -28,6 +29,11 @@ const Cards = () => {
               key={item.id}
               photo={item.photo}
               color="rgba(107, 209, 255, 1)"
+              category={item.category}
+              title={item.title}
+              link={item.link}
+              description={item.description}
+              id={item.id}
             />
           ))}
         </div>
@@ -41,6 +47,10 @@ const Cards = () => {
               key={item.id}
               photo={item.photo}
               color="rgba(0, 200, 111, 1)"
+              category={item.category}
+              title={item.title}
+              link={item.link}
+              description={item.description}
             />
           ))}
         </div>
@@ -54,6 +64,10 @@ const Cards = () => {
               key={item.id}
               photo={item.photo}
               color="rgba(255, 186, 5, 1)"
+              category={item.category}
+              title={item.title}
+              link={item.link}
+              description={item.description}
             />
           ))}
         </div>
