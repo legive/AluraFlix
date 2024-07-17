@@ -1,17 +1,15 @@
 {
-  "homepage": "https://legive.github.io/aluraflix",
-
-  "name": "aluraflix",
+   "name": "aluraflix",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+   "homepage": "https://legive-dev.com/aluraflix/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
+    
   },
   "dependencies": {
     "prop-types": "^15.8.1",
