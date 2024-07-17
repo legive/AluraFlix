@@ -1,14 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import { DataContext } from "../../contexto/dataContext"; 
+import { DataContext } from "../../contexto/dataContext";
 import Card from "../Card/Card";
 import TitleCard from "../TittleCard/TittleCard";
 import "./Cards.css";
 
 const Cards = () => {
   // Utiliza el contexto para obtener los datos
-  const { data } = useContext(DataContext)
+  const { data } = useContext(DataContext);
 
   console.log("Datos", { data });
 
@@ -51,6 +51,7 @@ const Cards = () => {
               title={item.title}
               link={item.link}
               description={item.description}
+              id={item.id}
             />
           ))}
         </div>
@@ -68,6 +69,7 @@ const Cards = () => {
               title={item.title}
               link={item.link}
               description={item.description}
+              id={item.id}
             />
           ))}
         </div>
