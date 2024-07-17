@@ -7,15 +7,31 @@ const ListaOpciones = (props) => {
   //Metodo map -> arreglo.map( (equipo, index) => {
   //    return <option></option>
   // })
- const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState([
+    {
+      id: 1,
+      name: "FRONT END",
+      primaryColor: "var(--color-frontend)",
+    },
+    {
+      id: 2,
+      name: "BACK END",
+      primaryColor: "var(--color-backend)",
+    },
+    {
+      id: 3,
+      name: "INNOVACIÓN Y GESTIÓN",
+      primaryColor: "var(--color-inov-gestao)",
+    },
+  ]);
 
- useEffect(() => {
-   // Realizar la solicitud GET aquí (ejemplo con fetch)
-   fetch("http://localhost:3000/categoryData") // Modifica la URL según tu configuración
-     .then((response) => response.json())
-     .then((data) => setCategory(data))
-     .catch((error) => console.error("Error fetching data:", error));
- }, []);
+//  useEffect(() => {
+//    // Realizar la solicitud GET aquí (ejemplo con fetch)
+//    fetch("http://localhost:3000/categoryData") // Modifica la URL según tu configuración
+//      .then((response) => response.json())
+//      .then((data) => setCategory(data))
+//      .catch((error) => console.error("Error fetching data:", error));
+//  }, []);
     
   const manejarCambio = (e) => {
     console.log("cambio", e.target.value);
