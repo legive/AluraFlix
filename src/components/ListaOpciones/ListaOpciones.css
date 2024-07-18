@@ -7,7 +7,7 @@
 }
 
 .lista-opciones select{
-  width: 573px;
+  min-width: 350px;
   padding: 10px;
   border-radius: 15px;
   border: 3px solid rgb(66, 63, 63); /* Borde gris oscuro */

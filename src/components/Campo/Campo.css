@@ -7,7 +7,7 @@ body {
 }
 
 .campo {
-  margin: 24px 0;
+
   font-family: 'Source Sans 3', sans-serif;
 }
 
@@ -21,9 +21,8 @@ body {
   margin-bottom: 8px;
 }
 
-.campo input {
-  width: 100%; /* Ancho al 100% del contenedor padre */
-  max-width: 470px; /* Ancho máximo */
+.textbox {
+  min-width: 350px;
   height: 62px;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 20px;
@@ -34,20 +33,13 @@ body {
   border: 3px solid rgb(66, 63, 63); /* Borde gris oscuro */
   background: none;
   color: white; /* Asegúrate de que el texto también sea visible en un fondo oscuro */
-  padding: 10px; /* Agrega un poco de padding para que el texto no toque los bordes */
+ 
 }
 
-.campo-color input {
-  height: 40px;
-  padding: 5px 20px;
-  border-radius: 15px;
-  border: 3px solid rgb(66, 63, 63); /* Borde gris oscuro */
-  background: none;
-  color: white;
-}
+
 @media (max-width: 600px) {
+.textbox {
+ width: 350px;
+}
 
- .campo input{
-    width: 80%;
-  }
 }
