@@ -17,11 +17,13 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  
 }
 
 .modal-content {
   background: rgba(3, 18, 47, 1);
-height: 90%;
+max-height: 90vh;
+ overflow-y: 'auto';
   border-radius: 8px;
   width: 100%;
   max-width: 90%;
