@@ -1,29 +1,16 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import { useDataContext } from "../../contexto/useDataContext";
 import "./ListaOpciones.css";
 import { useState, useEffect } from 'react'
 import { v4 as uuid } from "uuid";
+
 const ListaOpciones = (props) => {
+  const { category } = useDataContext();
   //Metodo map -> arreglo.map( (equipo, index) => {
   //    return <option></option>
   // })
-  const [category, setCategory] = useState([
-    {
-      id: 1,
-      name: "FRONT END",
-      primaryColor: "var(--color-frontend)",
-    },
-    {
-      id: 2,
-      name: "BACK END",
-      primaryColor: "var(--color-backend)",
-    },
-    {
-      id: 3,
-      name: "INNOVACIÓN Y GESTIÓN",
-      primaryColor: "var(--color-inov-gestao)",
-    },
-  ]);
+ 
 
 //  useEffect(() => {
 //    // Realizar la solicitud GET aquí (ejemplo con fetch)
@@ -40,8 +27,7 @@ const ListaOpciones = (props) => {
 
   return (
     <div className="lista-opciones">
-      <label>Equipos</label>
-      <select value={props.categoria} onChange={manejarCambio}>
+          <select value={props.categoria} onChange={manejarCambio}>
         <option value="" disabled defaultValue="" hidden>
           Seleccionar equipo
         </option>

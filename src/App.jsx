@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer"
 // import Cards from "./components/Cards/Cards"
 import{ BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { DataProvider } from "./contexto/dataContext"; // Ruta correcta al archivo dataContext.jsx
+import DetailCard from "./components/DetailCard/DetailCard";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new" element={<NewVideo />} />
-          {/* <Route path="*" element={<NewVideo />} /> */}
+           <Route path="/detail/:id" element={< DetailCard/>} /> 
         </Routes>
       </DataProvider>
       <Footer />

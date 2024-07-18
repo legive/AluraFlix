@@ -19,29 +19,17 @@ body {
   z-index: 1000;
 }
 
-.modal-content {
+.detalle-video {
   background: rgba(3, 18, 47, 1);
   padding: 20px;
   border-radius: 8px;
-  width: 50%;
+  width: 95%;
   max-width: 100%;
-  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content:left;
-  color: white;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: white;
+  align-items: center;
+  justify-content: center;
+  
+margin: auto;
 }
 
 .form {
@@ -49,14 +37,17 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-   color: white;
-  width: 100%;
-  max-width: 573px;
-  gap: 30px;
+  text-align: left;
   display: flex;
-  flex-direction: row;
- align-items: flex-start;
- align-items: start;
+  flex-direction: column;
+  color: white;
+  width:60%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .form h1 {
@@ -119,17 +110,4 @@ body {
     1
   ); /* Cambio de color al pasar el cursor */
   border-color: white;
-}
-
-@media (max-width: 600px) {
-
- .modal-content{
-    width: 100%;
-      }
-      .form{
-        gap:10px;
-      }
-     .form h1 {
-        font-size: 15px;
-      }
 }

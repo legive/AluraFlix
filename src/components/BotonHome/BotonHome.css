@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* Estilos para los botones */
+.btn-home {
+  cursor: pointer;
+  width: 169px;
+  height: 54px;
+  color: rgba(34, 113, 209, 1);
+  border-radius: 25px;
+  border: 2px solid rgba(34, 113, 209, 1);
+  background: none;
+    font-family: "Source Sans 3";
+      font-size: 20px;
+    font-weight: 900;
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-home img {
+  width: 24px;  /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto;  /* Mantener la proporción de la imagen */
+  margin-right: 8px;  /* Espacio entre la imagen y el texto */
+  
+}
+
+
+/* Estilos de hover para los botones */
+.boton:hover {
+  color: rgba(34, 113, 209, 1); /* Cambio de color al hacer hover */
+  border-color: rgba(34, 113, 209, 1); /* Cambio de color del borde al hacer hover */
+  box-shadow: 0px 0px 12px 4px rgba(34, 113, 209, 0.5); /* Sombra al hacer hover */
+}
+

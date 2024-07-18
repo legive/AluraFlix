@@ -9,6 +9,7 @@ DataContext.displayName = "Data";
 // Proveedor de datos
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(cardsData);
+  
 
 //     useEffect(() => {
       
@@ -19,7 +20,7 @@ export const DataProvider = ({ children }) => {
 //       //   .catch((error) => console.error("Error fetching data:", error));
 //       setData(cardsData)
 //   }, []);
-console.log(data)
+
   return (
     <DataContext.Provider value={{ data, setData }}>
       {children}

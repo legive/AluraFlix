@@ -45,3 +45,9 @@ body {
   background: none;
   color: white;
 }
+@media (max-width: 600px) {
+
+ .campo input{
+    width: 80%;
+  }
+}

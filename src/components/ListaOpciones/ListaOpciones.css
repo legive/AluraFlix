@@ -21,3 +21,9 @@
 .lista-opciones select option{
     color: black;
 }
+@media (max-width: 600px) {
+
+ .lista-opciones select{
+    width: 100%;
+  }
+}

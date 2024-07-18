@@ -5,6 +5,23 @@ import { DataContext } from "./dataContext";
 
 export const useDataContext = () => {
   const { data, setData } = useContext(DataContext);
+   const category = [
+     {
+       id: 1,
+       name: "FRONT END",
+       primaryColor: "rgba(107, 209, 255, 1)",
+     },
+     {
+       id: 2,
+       name: "BACK END",
+       primaryColor: "rgba(0, 200, 111, 1)",
+     },
+     {
+       id: 3,
+       name: "INNOVACIÓN Y GESTIÓN",
+       primaryColor: "rgba(255, 186, 5, 1)",
+     },
+   ];
 
   const agregarVideo = (nuevoVideo) => {
     const dataRepetido = data.some((item) => item.id === nuevoVideo.id);
@@ -55,5 +72,5 @@ export const useDataContext = () => {
     console.log("Objeto eliminado con id:", id);
   };
 
-  return { data, agregarVideo, actualizarData, eliminarData };
+  return { data, agregarVideo, actualizarData, eliminarData, category };
 };

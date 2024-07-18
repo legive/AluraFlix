@@ -5,14 +5,13 @@ import { DataContext } from "../../contexto/dataContext";
 import Card from "../Card/Card";
 import TitleCard from "../TittleCard/TittleCard";
 import "./Cards.css";
+import ModalPlayer from "../DetailCard/DetailCard";
 
 const Cards = () => {
   // Utiliza el contexto para obtener los datos
   const { data } = useContext(DataContext);
 
-  console.log("Datos", { data });
-
-  // Filtrar datos por categorías
+    // Filtrar datos por categorías
   const frontendData = data.filter((item) => item.category === "FRONT END");
   const backendData = data.filter((item) => item.category === "BACK END");
   const innovacionData = data.filter(

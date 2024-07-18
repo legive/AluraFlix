@@ -7,9 +7,6 @@ import Boton from "../Boton/Boton";
 import PropTypes from "prop-types";
 import "./Modal.css";
 
-
-
-
 const Modal = ({
   isOpen,
   onClose,
@@ -18,40 +15,37 @@ const Modal = ({
   title,
   link,
   description,
-  id
+  id,
 }) => {
   if (!isOpen) return null;
-  const {actualizarData } = useDataContext();
-  
+  const { actualizarData } = useDataContext();
+
   const [titulo, actualizarTitulo] = useState(title);
   const [categoria, actualizaCategoria] = useState(category);
   const [imagen, actualizarImagen] = useState(photo);
   const [video, actualizarVideo] = useState(link);
   const [descripcion, actualizardescripcion] = useState(description);
 
-console.log("Foto",imagen)
-  
- 
+  const manejarEnvio = (e) => {
+    e.preventDefault();
+    let datosAEnviar = {
+      id: id,
+      title: titulo,
+      category: categoria,
+      photo: imagen,
+      link: video,
+      description: descripcion,
+    };
+    actualizarData(datosAEnviar);
+    // history.push("/"); // Descomentar si utilizas React Router
+  };
 
-   const manejarEnvio = (e) => {
-     e.preventDefault();
-     console.log("Manejar el envio");
-     let datosAEnviar = {
-       id: id,
-       title: titulo,
-       category: categoria,
-       photo: imagen,
-       link: video,
-       description: descripcion,
-     };
-     actualizarData(datosAEnviar);
-      history.push("/");
+  const manejarCambioCategoria = (e) => {
+    actualizaCategoria(e.target.value);
+  };
 
-   
-   };
-   const manejarCambioCategoria = (e) => {
-     actualizaCategoria(e.target.value);
-   };
+
+
   return (
     <div className="modal-overlay">
       <div className="modal-content">
@@ -63,7 +57,7 @@ console.log("Foto",imagen)
           <h1>EDITAR CARD</h1>
           <label className="">Título</label>
           <input
-            value={title}
+            value={titulo}
             placeholder="¿qué es javascript?"
             type="text"
             onChange={(event) => {
@@ -108,8 +102,8 @@ console.log("Foto",imagen)
             }}
           ></textarea>
           <div className="botones">
-            <Boton texto="Guardar" />
-            <Boton onClick="Submit" texto="Limpiar" />
+            <Boton onClick={manejarEnvio} texto="Guardar" />
+            
           </div>
         </form>
       </div>
@@ -120,7 +114,7 @@ console.log("Foto",imagen)
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default Modal;

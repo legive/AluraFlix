@@ -46,8 +46,8 @@ const Formulario = () => {
    };
 
   return (
-    <section onSubmit={manejarEnvio} className="formulario">
-      <form>
+    <section onSubmit={manejarEnvio} className="sec-form" >
+      <form className="formulario">
         <h1>NUEVO VIDEO</h1>
         <h2>COMPLETE EL FORMULARIO PARA CREAR UNA NUEVA TARJETA DE VIDEO</h2>
 
@@ -64,7 +64,7 @@ const Formulario = () => {
           ></Campo>
           <div className="selec">
             <label>Categoría</label>
-            <ListaOpciones
+            <ListaOpciones 
               valor={categoria}
               actualizaCategoria={actualizaCategoria}
             ></ListaOpciones>
@@ -94,7 +94,7 @@ const Formulario = () => {
           placeholder="¿de qué trata este vídeo?"
         ></textarea>
 
-        <div className="botones">
+        <div className="botonesform">
          
             <button className="boton" type="submit">
               GUARDAR

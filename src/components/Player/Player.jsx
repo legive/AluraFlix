@@ -8,8 +8,6 @@ const Player = () => {
           src="https://www.youtube.com/embed/PlaQ913yggM?si=J6nugUvqqXrSW_Tb"
           title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-         
-          allowfullscreen
         ></iframe>
       </div>
     );
