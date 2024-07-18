@@ -54,7 +54,7 @@ const Modal = ({
         </button>
 
         <form className="form" onSubmit={manejarEnvio}>
-          <h1>EDITAR CARD</h1>
+          <p className="titulo">EDITAR CARD</p>
           <label className="">Título</label>
           <input
             value={titulo}
@@ -103,7 +103,6 @@ const Modal = ({
           ></textarea>
           <div className="botones">
             <Boton onClick={manejarEnvio} texto="Guardar" />
-            
           </div>
         </form>
       </div>
