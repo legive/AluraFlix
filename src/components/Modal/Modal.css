@@ -17,13 +17,14 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  overflow-y: auto; 
   
 }
 
 .modal-content {
   background: rgba(3, 18, 47, 1);
 max-height: 90vh;
- overflow-y: 'auto';
+overflow-y: auto; 
   border-radius: 8px;
   width: 100%;
   max-width: 90%;
@@ -59,6 +60,7 @@ max-height: 90vh;
   flex-direction: row;
  align-items: flex-start;
  align-items: start;
+
 }
 
 .titulo {
