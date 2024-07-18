@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 600px) {
 .textbox {
- width: 350px;
+ min-width: 300px;
 }
 
 }
